@@ -88,8 +88,8 @@ const data = [
   }
 ];
 
-/* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
-  
+/* Step 1: Create a function that creates a component. You will want your component to look like the template below:   
+
   <div class="article">
     <h2>{title of the article}</h2>
     <p class="date">{date of the article}</p>
@@ -98,7 +98,26 @@ const data = [
 
     <span class='expandButton'></span>
   </div>
+*/
+  function createComponent(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+    const component = document.createElement('div');
+    const titleH2 = document.createElement('h2');
+    const para1 = document.createElement('p');
+    const para2 = document.createElement('p');
+    const para3 = document.createElement('p');
+    const button = document.createElement('span');
 
+    component.appendChild(titleH2);
+    component.appendChild(para1);
+    component.appendChild(para2);
+    component.appendChild(para3);
+    component.appendChild(button);
+
+    return component
+  }
+
+
+/*
   Hint: You will need to use createElement more than once here!
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
