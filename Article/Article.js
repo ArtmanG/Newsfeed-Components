@@ -158,7 +158,7 @@ const newArticle3 = {
 
     // return
     return component;
-  }
+  };
 
 const articles = document.querySelector('.articles');
 data.push(newArticle1);
